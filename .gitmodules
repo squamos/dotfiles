@@ -1,0 +1,3 @@
+[submodule "homeshick"]
+	path = homeshick
+	url = git@github.com:squamos/homeshick.git
