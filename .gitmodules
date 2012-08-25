@@ -1,3 +1,33 @@
 [submodule "homeshick"]
 	path = homeshick
 	url = git@github.com:squamos/homeshick.git
+[submodule "home/.vim/bundle/Conque-Shell"]
+	path = home/.vim/bundle/Conque-Shell
+	url = git://github.com/vim-scripts/Conque-Shell.git
+[submodule "home/.vim/bundle/Command-T"]
+	path = home/.vim/bundle/Command-T
+	url = https://github.com/wincent/Command-T
+[submodule "home/.vim/bundle/greplace.vim"]
+	path = home/.vim/bundle/greplace.vim
+	url = https://github.com/skwp/greplace.vim.git
+[submodule "home/.vim/bundle/nerdtree"]
+	path = home/.vim/bundle/nerdtree
+	url = https://github.com/scrooloose/nerdtree
+[submodule "home/.vim/bundle/supertab"]
+	path = home/.vim/bundle/supertab
+	url = https://github.com/ervandew/supertab
+[submodule "home/.vim/bundle/vim-coffee-script"]
+	path = home/.vim/bundle/vim-coffee-script
+	url = https://github.com/kchmck/vim-coffee-script
+[submodule "home/.vim/bundle/vim-fugitive"]
+	path = home/.vim/bundle/vim-fugitive
+	url = https://github.com/tpope/vim-fugitive
+[submodule "home/.vim/bundle/vim-repeat"]
+	path = home/.vim/bundle/vim-repeat
+	url = https://github.com/tpope/vim-repeat
+[submodule "home/.vim/bundle/vim-surround"]
+	path = home/.vim/bundle/vim-surround
+	url = https://github.com/tpope/vim-surround
+[submodule "home/.vim/bundle/lint.vim"]
+	path = home/.vim/bundle/lint.vim
+	url = https://github.com/vim-scripts/lint.vim
