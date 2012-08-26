@@ -1,0 +1,16 @@
+[branch]
+	autosetuprebase = always
+
+[color]
+	diff = auto
+[user]
+	name = Amos Barreto
+	email = amos.barreto@gmail.com
+[core]
+	editor = vim
+[alias]
+	co = checkout
+	br = branch
+	ci = commit
+	st = status
+	unstage = reset HEAD --

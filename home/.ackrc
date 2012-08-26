@@ -1,0 +1,5 @@
+--type-set
+cs=.coffee
+
+--type-set
+eco=.eco
