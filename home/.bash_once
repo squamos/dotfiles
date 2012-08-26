@@ -1,3 +1,6 @@
+SHELL_ONCE='thishappened'
+export SHELL_ONCE
+
 export PATH=/Library/Frameworks/Python.framework/Versions/2.7/bin:$PATH
 
 if [ -f /usr/local/bin/virtualenvwrapper.sh ]; then
