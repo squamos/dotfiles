@@ -31,3 +31,6 @@
 [submodule "home/.vim/bundle/lint.vim"]
 	path = home/.vim/bundle/lint.vim
 	url = https://github.com/vim-scripts/lint.vim
+[submodule "bashrc_dispatch"]
+	path = bashrc_dispatch
+	url = git://github.com/josephwecker/bashrc_dispatch.git
