@@ -5,5 +5,9 @@ BASHRC_DISPATHCH_FILEPATH=~/dotfiles/bashrc_dispatch/bashrc_dispatch
 ln -s $BASHRC_DISPATHCH_FILEPATH ~/.bashrc
 ln -s $BASHRC_DISPATHCH_FILEPATH ~/.bash_profile
 ln -s $BASHRC_DISPATHCH_FILEPATH ~/.profile
-ln -s $BASHRC_DISPATHCH_FILEPATH ~/.bach_login
+ln -s $BASHRC_DISPATHCH_FILEPATH ~/.bash_login
 
+chmod +x ~/.bashrc
+chmod +x ~/.bash_profile
+chmod +x ~/.profile
+chmod +x ~/.bash_login
