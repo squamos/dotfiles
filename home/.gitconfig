@@ -1,16 +1,24 @@
+[user]
+	name = Amos Barreto
+	email = amos.barreto@gmail.com
+
 [branch]
 	autosetuprebase = always
 
 [color]
 	diff = auto
-[user]
-	name = Amos Barreto
-	email = amos.barreto@gmail.com
+
 [core]
 	editor = vim
+	excludesfile = ~/.gitignore
+
 [alias]
 	co = checkout
 	br = branch
 	ci = commit
 	st = status
 	unstage = reset HEAD --
+	edit-unmerged = \
+		    "!f() { git ls-files --unmerged | cut -f2 | sort -u ; }; vim `f`"
+	add-unmerged = \
+		    "!f() { git ls-files --unmerged | cut -f2 | sort -u ; }; git add `f`"

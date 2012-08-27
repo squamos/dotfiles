@@ -95,3 +95,34 @@ alias cd......="cd ../../../../.."
 function mkdircd () { mkdir -p "$@" && eval cd "\"\$$#\""; }
 
 shopt -s cdspell
+
+
+# HISTORY
+HISTTIMEFORMAT='%F %T '
+HISTSIZE=1000
+HISTFILESIZE=1000
+HISTCONTROL="ignoredups:erasedups:ignorespace:"
+HISTIGNORE="pwd:ls:ls -al:"
+# Treading lightly...
+[ ! shell_is_osx ] && HISTFILE=/dev/null
+
+alias findbig="find . -type f -exec ls -s {} \; | sort -n -r | head -$1;"
+alias findallbig="find . -size +100M;"
+alias findsmall="find . -type f -exec ls -s {} \; | sort -n  | head -$1;"
+alias findsmalln0="find . -not -empty -type f -exec ls -s {} \; | sort -n  | head -$1;"
+alias findsock="find . -type s;"
+alias finddir="find . -type d;"
+alias findnormal="find . -type f;"
+alias findhidden="find . -type f -name ".*";"
+alias findhiddendir="find -type d -name ".*";"
+
+alias ll="ls -alh"
+alias lv="ls -F"
+
+# PYTHON
+PYTHONSTARTUP=~/.pythonrc.py
+
+# HOMESICK
+function homeshick () { ~/dotfiles/homeshick/homeshick "$@"; }
+function homesick () { ~/dotfiles/homeshick/homeshick "$@"; }
+
