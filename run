@@ -1,0 +1,28 @@
+#!/bin/bash
+
+HOMESHICK_DIR_PATH=~/dotfiles/homeshick
+
+function setup {
+	pushd $HOMESHICK_DIR_PATH > /dev/null
+	./homeshick clone ~/dotfiles
+	./homeshick  symlink dotfiles
+	popd > /dev/null
+}
+
+function oldsetup {
+	BASHRC_DISPATHCH_FILEPATH=~/dotfiles/bashrc_dispatch/bashrc_dispatch
+
+	ln -s $BASHRC_DISPATHCH_FILEPATH ~/.bashrc
+	ln -s $BASHRC_DISPATHCH_FILEPATH ~/.bash_profile
+	ln -s $BASHRC_DISPATHCH_FILEPATH ~/.profile
+	ln -s $BASHRC_DISPATHCH_FILEPATH ~/.bash_login
+
+	chmod +x ~/.bashrc
+	chmod +x ~/.bash_profile
+	chmod +x ~/.profile
+	chmod +x ~/.bash_login
+}
+
+case $1 in
+	setup) setup ;;
+esac
