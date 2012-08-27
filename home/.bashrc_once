@@ -126,3 +126,5 @@ PYTHONSTARTUP=~/.pythonrc.py
 function homeshick () { ~/dotfiles/homeshick/homeshick "$@"; }
 function homesick () { ~/dotfiles/homeshick/homeshick "$@"; }
 
+# DOTFILES
+function dotfiles () { ~/dotfiles/dotfiles "$@"; }

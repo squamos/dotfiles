@@ -1,0 +1,27 @@
+#!/bin/bash
+
+DOTFILES_HOME=~/dotfiles
+HOMESHICK_DIR_PATH=$DOTFILES_HOME/homeshick
+
+function setup {
+	pushd $DOTFILES_HOME > /dev/null
+	git submodule init
+	git submodule update
+	pushd $HOMESHICK_DIR_PATH > /dev/null
+	./homeshick clone ~/dotfiles
+	./homeshick  symlink dotfiles
+	popd > /dev/null
+	popd > /dev/null
+}
+
+function push {
+	local login="amos@$2"
+	echo "$login"
+	scp ~/.ssh/github "$login:~/.ssh/id_rsa"
+	echo "git clone git://github.com/squamos/dotfiles.git && dotfiles/dotfiles setup" | ssh $login /bin/bash
+}
+
+case $1 in
+	setup) setup  ;;
+	push) push $@ ;;
+esac
