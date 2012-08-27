@@ -1,6 +1,6 @@
 [submodule "homeshick"]
 	path = homeshick
-	url = git@github.com:squamos/homeshick.git
+	url = git://github.com/squamos/homeshick.git
 [submodule "home/.vim/bundle/Conque-Shell"]
 	path = home/.vim/bundle/Conque-Shell
 	url = git://github.com/vim-scripts/Conque-Shell.git
