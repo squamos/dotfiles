@@ -4,9 +4,6 @@
 [submodule "home/.vim/bundle/Conque-Shell"]
 	path = home/.vim/bundle/Conque-Shell
 	url = git://github.com/vim-scripts/Conque-Shell.git
-[submodule "home/.vim/bundle/Command-T"]
-	path = home/.vim/bundle/Command-T
-	url = https://github.com/wincent/Command-T
 [submodule "home/.vim/bundle/greplace.vim"]
 	path = home/.vim/bundle/greplace.vim
 	url = https://github.com/skwp/greplace.vim.git
