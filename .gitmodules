@@ -34,3 +34,6 @@
 [submodule "bashrc_dispatch"]
 	path = bashrc_dispatch
 	url = git://github.com/josephwecker/bashrc_dispatch.git
+[submodule "home/.vim/bundle/ctrlp.vim"]
+	path = home/.vim/bundle/ctrlp.vim
+	url = https://github.com/kien/ctrlp.vim

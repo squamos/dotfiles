@@ -14,13 +14,6 @@ set <S-Left>=[shift]left
 set <S-Up>=[shift]up
 set <S-Down>=[shift]down
 
-" Window movements; I do this often enough to warrant using up M-arrows on
-" this"
-"noremap <M-Right> <C-W><Right>
-"noremap <M-Left> <C-W><Left>
-"noremap <M-Up> <C-W><Up>
-"noremap <M-Down> <C-W><Down>
-
 nmap <S-Right> <C-W><Right>
 imap <S-Right> <Esc><C-W><Right>
 nmap <S-Left> <C-W><Left>
@@ -33,15 +26,16 @@ imap <S-Down> <Esc><C-W><Down>
 " Shortcut to exit insert mode
 imap ;; <Esc>
 
+" exit insert mode and save
+" imap :: <Esc>:w<CR>
+
 " Auto-open NERDTree on vim start
 au VimEnter *  NERDTree
 
+" Paste mode
 nnoremap <F2> :set invpaste paste?<CR>
 set pastetoggle=<F2>
 set showmode
-
-" exit insert mode and save
-" imap :: <Esc>:w<CR>
 
 " Strip trailing whitespace
 function! <SID>StripTrailingWhitespaces()
@@ -106,4 +100,18 @@ else
   au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>80v.\+', -1)
 endif
 
+" Ctrl-P
+set runtimepath^=~/.vim/bundle/ctrlp.vim
+" let g:ctrlp_map = '<Leader>t'
+nmap <Leader>t <C-P>
+let g:ctrlp_cmd = 'CtrlP'
+let g:ctrlp_working_path_mode = 'rc'
+"set wildignore+=*/tmp/*,*.so,*.swp,*.zip,.git/ " Linux/MacOSX
+let g:ctrlp_custom_ignore = {
+	\ 'dir':  '\v[\/](\.git|\.hg|\.svn)$',
+	\ 'file': '\.sw[a-z]$\|\.so$',
+	\ }
+let g:ctrlp_user_command = 'find %s -type f' " MacOSX/Linux
+call pathogen#helptags()
+helptags ~/.vim/bundle/ctrlp.vim/doc
 
