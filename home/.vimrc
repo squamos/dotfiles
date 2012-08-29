@@ -117,4 +117,47 @@ let g:ctrlp_user_command = 'find %s -type f' " MacOSX/Linux
 call pathogen#helptags()
 helptags ~/.vim/bundle/ctrlp.vim/doc
 
+" Backspace Support
 set backspace=indent,eol,start
+
+""" Python Mode
+" Enable python folding
+let g:pymode_folding = 0
+
+" Load run code plugin
+let g:pymode_run = 1
+
+" Disable pylint checking every save
+let g:pymode_lint_write = 0
+
+" Key for run python code
+" let g:pymode_run_key = '<Leader>r'
+let g:pymode_run_key = 'R'
+
+" Load pylint code plugin
+let g:pymode_lint = 1
+
+" Auto open cwindow if errors be finded
+let g:pymode_lint_cwindow = 1
+
+" Place error signs
+let g:pymode_lint_signs = 1
+
+" Show error message if cursor placed at the error line
+let g:pymode_lint_message = 1
+
+" Load show documentation plugin
+let g:pymode_doc = 1
+
+" Key for show python documentation
+let g:pymode_doc_key = 'K'
+
+" Rope GOTO definition mapping
+nmap <Leader>g <C-c>g
+
+" Rope DOC show mapping
+nmap <Leader>d <C-c>d
+
+" Rope find all mapping
+nmap <Leader>f <C-c>f
+
