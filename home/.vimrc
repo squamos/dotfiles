@@ -1,9 +1,11 @@
+" Pathogen load
+filetype off
+
 call pathogen#infect()
 call pathogen#helptags()
 
-syntax on
-
 filetype plugin indent on
+syntax on
 
 " autocmd BufWritePost *.coffee silent CoffeeMake! -b | cwindow | redraw!
 
@@ -115,3 +117,4 @@ let g:ctrlp_user_command = 'find %s -type f' " MacOSX/Linux
 call pathogen#helptags()
 helptags ~/.vim/bundle/ctrlp.vim/doc
 
+set backspace=indent,eol,start

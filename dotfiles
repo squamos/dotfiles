@@ -4,6 +4,7 @@ DOTFILES_HOME=~/dotfiles
 HOMESHICK_DIR_PATH=$DOTFILES_HOME/homeshick
 
 function setup {
+	vim
 	pushd $DOTFILES_HOME > /dev/null
 	git submodule init
 	git submodule update
@@ -14,6 +15,18 @@ function setup {
 	popd > /dev/null
 }
 
+function vim {
+	if [ ! -d $DOTFILES_HOME/vim73 ]; then
+		pushd $DOTFILES_HOME > /dev/null
+		curl ftp://ftp.vim.org/pub/vim/unix/vim-7.3.tar.bz2 | tar xj
+		pushd vim73 > /dev/null
+		./configure --with-features=big --enable-pythoninterp
+		make
+		popd > /dev/null
+		popd > /dev/null
+	fi
+}
+
 function push {
 	local login="amos@$2"
 	echo "$login"
@@ -22,6 +35,7 @@ function push {
 }
 
 case $1 in
-	setup) setup  ;;
-	push) push $@ ;;
+	setup) setup   ;;
+	push)  push $@ ;;
+	vim)   vim     ;;
 esac
