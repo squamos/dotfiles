@@ -1,3 +1,5 @@
+let g:ctrlp_custom_ignore = '.git'
+
 " Pathogen load
 filetype off
 
@@ -103,19 +105,14 @@ else
 endif
 
 " Ctrl-P
+call pathogen#helptags()
+helptags ~/.vim/bundle/ctrlp.vim/doc
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 " let g:ctrlp_map = '<Leader>t'
 nmap <Leader>t <C-P>
 let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_working_path_mode = 'rc'
-"set wildignore+=*/tmp/*,*.so,*.swp,*.zip,.git/ " Linux/MacOSX
-let g:ctrlp_custom_ignore = {
-	\ 'dir':  '\v[\/](\.git|\.hg|\.svn)$',
-	\ 'file': '\.sw[a-z]$\|\.so$',
-	\ }
 let g:ctrlp_user_command = 'find %s -type f' " MacOSX/Linux
-call pathogen#helptags()
-helptags ~/.vim/bundle/ctrlp.vim/doc
 
 " Backspace Support
 set backspace=indent,eol,start
@@ -123,6 +120,9 @@ set backspace=indent,eol,start
 """ Python Mode
 " Enable python folding
 let g:pymode_folding = 0
+
+" Load rope plugin
+let g:pymode_rope = 1
 
 " Load run code plugin
 let g:pymode_run = 1

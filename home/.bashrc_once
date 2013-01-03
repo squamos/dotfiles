@@ -83,7 +83,6 @@ PATH="/Library/Frameworks/Python.framework/Versions/2.7/bin:${PATH}"
 export PATH
 
 
-
 # ALIASES
 alias ..="cd .."
 alias ..2="cd ../.."
@@ -106,7 +105,6 @@ alias cd......="cd ../../../../.."
 function mkdircd () { mkdir -p "$@" && eval cd "\"\$$#\""; }
 
 shopt -s cdspell
-
 
 # HISTORY
 HISTTIMEFORMAT='%F %T '
@@ -140,4 +138,8 @@ function homesick () { ~/dotfiles/homeshick/homeshick "$@"; }
 # DOTFILES
 function dotfiles () { ~/dotfiles/dotfiles "$@"; }
 
+# CLEAN
+alias clean="find . \( ! -regex '.*/\..*/..*' \) -type f \( -name '*.pyc' -name '.*.sw*' \) -exec rm '{}' +"
 
+# PRIVATE / UN-VERSIONED
+source ~/.bashrc_private
