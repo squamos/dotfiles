@@ -132,8 +132,7 @@ alias lv="ls -F"
 PYTHONSTARTUP=~/.pythonrc.py
 
 # HOMESICK
-function homeshick () { ~/dotfiles/homeshick/homeshick "$@"; }
-function homesick () { ~/dotfiles/homeshick/homeshick "$@"; }
+source "$HOME/.homesick/repos/homeshick/homeshick.sh"
 
 # DOTFILES
 function dotfiles () { ~/dotfiles/dotfiles "$@"; }
